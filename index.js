@@ -26,7 +26,7 @@ const uploadFiles = (req, res) => {
       size: req.file.size
     })
 }
-app.post("/multipart/form-data", upload.single('upfile'), uploadFiles);
+app.post("/api/fileanalyse", upload.single('upfile'), uploadFiles);
 
 // Storing data to mongo DB try
 const sendToMongo = require('./sendToMongo');
